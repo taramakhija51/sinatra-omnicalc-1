@@ -22,7 +22,7 @@ end
 
 get("/square_root/results") do
   @num = params.fetch("num").to_i
-  @sqrt = @num ** .5
+  @sqrt = @num ** 0.5
   erb(:square_root_new)
 end
 get("/random/new") do
