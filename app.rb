@@ -29,8 +29,9 @@ get("/random/new") do
   erb(:random_new)
 end
 get("/random/results") do
-  @num = params.fetch("num").to_i
-  @square = @num ** 2
+  @min = params.fetch("user_min").to_i
+  @max = params.fetch("user_max").to_i
+  @num = rand(@min..@max)
   erb(:random_new)
 end
 get("/payment/new") do
